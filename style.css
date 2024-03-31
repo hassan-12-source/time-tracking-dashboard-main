@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    min-height: 100vh;
+}
+
+body{
+    background-color: hsl(226, 43%, 10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Rubik", sans-serif;
+}
+.container{
+    width: 100%;
+    max-width: 800px;
+    margin: 3rem;
+    display: flex;
+    gap: 35px;
+}
+/*************** Main Card **************************/
+.sidebar{
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+    width: 25%;
+}
+.profile{
+    background-color: hsl(246, 80%, 60%);
+    padding: 1.5em;
+    border-radius: 15px;
+}
+.profile img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-bottom: 2em;
+}
+.report{
+    color: rgb(179, 179, 179);
+    font-size: 1rem;
+    font-family: "Rubik", sans-serif;
+}
+.name{
+    color: white;
+    font-size: 2rem;
+    font-family: "Rubik", sans-serif;
+}
+.times{
+    padding: 1.5rem;
+}
+.times p{
+    margin-bottom: 15px;
+    color: hsl(235, 45%, 61%);
+    cursor: pointer;
+}
+p.active {
+    color: whitesmoke;
+}
+/************* Small cards *******************************/
+.tracks{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 65px;
+}
+.track-item{
+    border-radius: 10px;
+    background-color: hsl(235, 46%, 20%);
+    color: #fff;
+    padding: 1em;
+    position: relative;
+    margin-top: 25px;
+    width: 100%;
+    height: 69%;
+}
+.track-item .nav{
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+}
+.track-item .nav span:nth-child(2){
+    margin-top: -.3em;
+    font-weight: bolder;
+}
+.track-item .time{
+    font-size: 2em;
+    margin-top: .5em;
+}
+.track-item .previous{
+    color: rgba(255, 255, 255, 0.5);
+}
+.top{
+    margin-top: 45px;
+}
+.track-item::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-color: hsl(15, 100%, 70%);
+    position: absolute;
+    top: -25px;
+    left: 0;
+    z-index: -1;
+    border-radius: 10px;
+    transition: top .3s;
+    background-image: url(images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50px 50px;
+}
+/*************** Play card **********************************/
+.track-item-2{
+    background-color: #fff;
+    border-radius: 10px;
+    background-color: hsl(235, 46%, 20%);
+    color: #fff;
+    padding: 1em;
+    position: relative;
+    margin-top: 25px;
+    width: 100%;
+    height: 69%;
+}
+.track-item-2::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-color: hsl(195, 74%, 62%);
+    position: absolute;
+    top: -25px;
+    left: 0;
+    z-index: -1;
+    border-radius: 10px;
+    transition: top .3s;
+    background-image: url(images/icon-play.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50px 50px;
+}
+.track-item-2 .time{
+    font-size: 2em;
+    margin-top: .5em;
+}
+.track-item-2 .previous{
+    color: rgba(255, 255, 255, 0.5);
+}
+.track-item-2 .nav{
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+}
+.track-item-2 .nav span:nth-child(2){
+    margin-top: -.3em;
+    font-weight: bolder;
+}
+/*********** Study Card ***********************************/
+.track-item-3{
+    background-color: #fff;
+    border-radius: 10px;
+    background-color: hsl(235, 46%, 20%);
+    color: #fff;
+    padding: 1em;
+    position: relative;
+    margin-top: 25px;
+    width: 100%;
+    height: 69%;
+}
+.track-item-3::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-color: hsl(348, 100%, 68%);
+    position: absolute;
+    top: -25px;
+    left: 0;
+    z-index: -1;
+    border-radius: 10px;
+    transition: top .3s;
+    background-image: url(images/icon-study.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50px 50px;
+}
+.track-item-3 .time{
+    font-size: 2em;
+    margin-top: .5em;
+}
+.track-item-3 .previous{
+    color: rgba(255, 255, 255, 0.5);
+}
+.track-item-3 .nav{
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+}
+.track-item-3 .nav span:nth-child(2){
+    margin-top: -.3em;
+    font-weight: bolder;
+}
+/********** Exercise ********************************/
+.track-item-4{
+    background-color: #fff;
+    border-radius: 10px;
+    background-color: hsl(235, 46%, 20%);
+    color: #fff;
+    padding: 1em;
+    position: relative;
+    margin-top: 25px;
+    width: 100%;
+    height: 69%;
+}
+.track-item-4::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-color: hsl(145, 58%, 55%);
+    position: absolute;
+    top: -25px;
+    left: 0;
+    z-index: -1;
+    border-radius: 10px;
+    transition: top .3s;
+    background-image: url(images/icon-exercise.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50px 50px;
+}
+.track-item-4 .time{
+    font-size: 2em;
+    margin-top: .5em;
+}
+.track-item-4 .previous{
+    color: rgba(255, 255, 255, 0.5);
+}
+.track-item-4 .nav{
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+}
+.track-item-4 .nav span:nth-child(2){
+    margin-top: -.3em;
+    font-weight: bolder;
+}
+/********* Social Card **************************************/
+.track-item-5{
+    background-color: #fff;
+    border-radius: 10px;
+    background-color: hsl(235, 46%, 20%);
+    color: #fff;
+    padding: 1em;
+    position: relative;
+    margin-top: 25px;
+    width: 100%;
+    height: 69%;
+}
+.track-item-5::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-color: hsl(264, 64%, 52%);
+    position: absolute;
+    top: -25px;
+    left: 0;
+    z-index: -1;
+    border-radius: 10px;
+    transition: top .3s;
+    background-image: url(images/icon-social.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50px 50px;
+}
+.track-item-5 .time{
+    font-size: 2em;
+    margin-top: .5em;
+}
+.track-item-5 .previous{
+    color: rgba(255, 255, 255, 0.5);
+}
+.track-item-5 .nav{
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+}
+.track-item-5 .nav span:nth-child(2){
+    margin-top: -.3em;
+    font-weight: bolder;
+}
+/************ Self care card ************************/
+.track-item-6{
+    background-color: #fff;
+    border-radius: 10px;
+    background-color: hsl(235, 46%, 20%);
+    color: #fff;
+    padding: 1em;
+    position: relative;
+    margin-top: 25px;
+    width: 100%;
+    height: 69%;
+}
+.track-item-6::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-color: hsl(43, 84%, 65%);
+    position: absolute;
+    top: -25px;
+    left: 0;
+    z-index: -1;
+    border-radius: 10px;
+    transition: top .3s;
+    background-image: url(images/icon-self-care.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50px 50px;
+}
+.track-item-6 .time{
+    font-size: 2em;
+    margin-top: .5em;
+}
+.track-item-6 .previous{
+    color: rgba(255, 255, 255, 0.5);
+}
+.track-item-6 .nav{
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+}
+.track-item-6 .nav span:nth-child(2){
+    margin-top: -.3em;
+    font-weight: bolder;
+}
+/************* Screen Mobile 646px ****************/
+@media screen and (max-width: 646px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .tracks{
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar{
+        width: calc(100% - -28px);
+        margin-bottom: 20px;
+    }
+}
